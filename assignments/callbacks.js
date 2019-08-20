@@ -35,32 +35,55 @@ const items = ["Pencil", "Notebook", "yo-yo", "Gum"];
 // const test2 = firstItem(items, logExorbitantPrice);
 // console.log(test2); // "this Pencil is worth a million dollars!"
 
+// First challenge
 //  Original HOF
-function getLength(arr, cb) {
+function getLength(cb, arr) {
   // getLength passes the length of the array into the callback.
   return cb(arr.length);
 }
 
 const getLengthResults = length => console.log(length);
-
-getLength(items, getLengthResults);
+getLength(getLengthResults, items);
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  return cb(arr[arr.length - 1]);
 }
+
+const getLastItem = item => console.log(item);
+last(items, getLastItem);
 
 function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
+  // sumNums adds two numbers (x, y)
+  const total = x + y;
+  // and passes the result to the callback (cb).
+  return cb(total);
 }
 
+const resultFunction = res => console.log(res);
+sumNums(10, 214, resultFunction);
+
 function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
+  // multiplyNums multiplies two numbers and passes the result to the callback.  // sumNums adds two numbers (x, y)
+  const total = x * y;
+  return cb(total);
 }
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  list.length > 0
+  ? item = true 
+  : item = false;
+
+  return cb(item);
 }
+
+const checker = (result) => {
+  console.log(result);
+}
+
+contains(false, items, checker);
 
 /* STRETCH PROBLEM */
 

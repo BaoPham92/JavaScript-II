@@ -4,6 +4,19 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+const ogDaddy = () => {
+  const daddysSecret = "I got 10 racks";
+  console.log(daddysSecret);
+
+  const littleOg = () => {
+    const lilOgsSecret = "I got 30 racks";
+    console.log(lilOgsSecret);
+  }
+
+  return littleOg();
+}
+
+ogDaddy();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 

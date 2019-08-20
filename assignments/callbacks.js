@@ -45,6 +45,7 @@ function getLength(cb, arr) {
 const getLengthResults = length => console.log(length);
 getLength(getLengthResults, items);
 
+// Challenge 2
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
   return cb(arr[arr.length - 1]);
@@ -53,6 +54,7 @@ function last(arr, cb) {
 const getLastItem = item => console.log(item);
 last(items, getLastItem);
 
+// Challenge 3
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y)
   const total = x + y;
@@ -63,12 +65,14 @@ function sumNums(x, y, cb) {
 const resultFunction = res => console.log(res);
 sumNums(10, 214, resultFunction);
 
+// Challenge 4
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.  // sumNums adds two numbers (x, y)
   const total = x * y;
   return cb(total);
 }
 
+// Challenge 5
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
